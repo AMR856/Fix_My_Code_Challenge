@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""My square class"""
+"""My square module"""
 
 
 class Square():
-    """Here is the class"""
-    side = 0
+    """My square class here"""
+
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
@@ -12,19 +14,18 @@ class Square():
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.side * self.side
+        return self.width * self.width
 
     def PermiterOfMySquare(self):
-        return self.side * 4
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        return "A square with a side length of {}".format(self.side)
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    """The height should be the same as the width"""
-    # s = Square(width=12, height=9)
-    s = Square(side=12)
+
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
