@@ -9,6 +9,7 @@ class Square():
     height = 0
 
     def __init__(self, *args, **kwargs):
+        """The init of my class"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -24,7 +25,7 @@ class Square():
 
 
 if __name__ == "__main__":
-
+    """My main method"""
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
